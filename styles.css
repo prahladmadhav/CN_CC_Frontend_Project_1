@@ -1,0 +1,362 @@
+body {
+  margin: 0;
+  font-family: Muli, sans-serif;
+}
+body a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main-container {
+  background-color: #0c1027;
+  color: #ffffff;
+}
+.main-container .image-zoom {
+  transition: transform 0.2s;
+}
+.main-container .image-zoom:hover {
+  transform: scale(1.5);
+}
+.main-container .header-container {
+  z-index: 1;
+  background-image: linear-gradient(to bottom, #0c1027 70px, rgba(0, 0, 0, 0));
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  padding: 30px 35px 10px;
+  display: flex;
+  align-items: center;
+}
+.main-container .header-container .header-left-section,
+.main-container .header-container .header-right-section {
+  width: 50%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.main-container .header-container .header-left-section .header-logo-section {
+  position: relative;
+}
+.main-container .header-container .header-left-section .header-logo {
+  height: 70px;
+}
+.main-container .header-container .header-left-section .header-logo-rotate {
+  animation: rotation 10s infinite linear;
+}
+.main-container .header-container .header-left-section .header-logo-norotate {
+  height: 40px;
+  left: 50px;
+  top: 35px;
+  position: absolute;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.main-container .header-container .header-left-section .header-name {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.main-container .header-container .header-left-section .header-name-p2 {
+  font-weight: bold;
+}
+.main-container .header-container .header-left-section .header-fav {
+  font-size: 15px;
+  padding-left: 70px;
+}
+.main-container .header-container .header-left-section .search-grow-div {
+  flex-grow: 1;
+}
+.main-container .header-container .header-left-section .header-nav-icon {
+  display: none;
+}
+.main-container .header-container .header-right-section {
+  justify-content: flex-end;
+}
+.main-container .header-container .header-right-section .search-bar {
+  background-color: #12193e;
+  width: 300px;
+  display: flex;
+  align-content: center;
+  padding: 10px 5px;
+  border-radius: 8px;
+}
+.main-container
+  .header-container
+  .header-right-section
+  .search-bar
+  .search-icon {
+  height: 20px;
+}
+.main-container
+  .header-container
+  .header-right-section
+  .search-bar
+  .search-content {
+  padding-left: 15px;
+}
+.main-container
+  .header-container
+  .header-right-section
+  .search-bar
+  .search-grow-div {
+  flex-grow: 1;
+}
+.main-container .header-container .header-right-section .notification-icon {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 30px;
+}
+.main-container .header-container .header-right-section .profile-icon {
+  height: 50px;
+  border-radius: 25px;
+}
+@media screen and (max-width: 700px) {
+  .main-container .header-container .header-left-section {
+    width: 100%;
+  }
+  .main-container .header-container .header-left-section .header-fav {
+    display: none;
+  }
+  .main-container .header-container .header-left-section .header-nav-icon {
+    display: block;
+  }
+  .main-container .header-container .header-right-section {
+    display: none;
+  }
+}
+@media screen and (max-width: 350px) {
+  .main-container .header-container {
+    padding: 30px 10% 10px;
+  }
+  .main-container .header-container .header-left-section {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .main-container .header-container .header-left-section .search-grow-div {
+    min-width: 20px;
+  }
+}
+.main-container .content-container {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  padding: 0 30px;
+}
+.main-container .content-container .content-left-container {
+  overflow: auto;
+  width: 75%;
+  height: 85vh;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.main-container .content-container .content-left-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+.main-container
+  .content-container
+  .content-left-container
+  .top-image-container {
+  display: inline;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .top-image-container
+  img.top-image {
+  max-width: 500px;
+  width: 20%;
+  padding: 30px;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .top-image-container:hover {
+  opacity: 0.7;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .top-image-container:hover
+  img.top-image {
+  transition: transform 0.2s;
+  transform: scale(0.8);
+}
+.main-container
+  .content-container
+  .content-left-container
+  .top-image-container
+  img.top-image:hover {
+  opacity: 1;
+  transition: transform 0.2s;
+  transform: scale(1.2);
+}
+.main-container
+  .content-container
+  .content-left-container
+  .latest-release-container
+  .latest-release-albums-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .latest-release-container
+  .latest-release-albums-container
+  .latest-release-album {
+  width: 40%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .latest-release-container
+  .latest-release-albums-container
+  .latest-release-album
+  .latest-release-album-img {
+  height: 60px;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .latest-release-container
+  .latest-release-albums-container
+  .latest-release-album
+  .latest-release-album-img:hover {
+  opacity: 0.5;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .latest-release-container
+  .latest-release-albums-container
+  .latest-release-album
+  .latest-release-album-name {
+  padding-left: 30px;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .latest-release-container
+  .latest-release-albums-container
+  .latest-release-album
+  .latest-release-album-grow {
+  flex-grow: 1;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .latest-release-container
+  .latest-release-albums-container
+  .latest-release-album
+  .latest-release-album-last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .latest-release-container
+  .latest-release-albums-container
+  .latest-release-album
+  .latest-release-album-options
+  img {
+  width: 30px;
+}
+.main-container
+  .content-container
+  .content-left-container
+  .latest-release-container
+  .latest-release-albums-container
+  .latest-release-album
+  .latest-release-album-time {
+  padding-top: 10px;
+}
+.main-container .content-container .content-right-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  height: 85vh;
+  width: 25%;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.main-container .content-container .content-right-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+.main-container .content-container .content-right-container .aside-album {
+  padding-bottom: 10px;
+  display: flex;
+  align-content: center;
+}
+.main-container
+  .content-container
+  .content-right-container
+  .aside-album
+  .album-div {
+  align-self: center;
+  text-align: right;
+  padding: 0 10px;
+  width: 20px;
+}
+.main-container
+  .content-container
+  .content-right-container
+  .aside-album
+  .album-img {
+  height: 40px;
+}
+.main-container
+  .content-container
+  .content-right-container
+  .aside-album
+  .album-img:hover {
+  opacity: 0.5;
+}
+.main-container
+  .content-container
+  .content-right-container
+  .aside-album
+  .album-div-flex {
+  padding: 0 20px;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+.main-container
+  .content-container
+  .content-right-container
+  .aside-album
+  .album-div-flex
+  .album-song-name {
+  font-weight: bold;
+}
+.main-container
+  .content-container
+  .content-right-container
+  .aside-album
+  .album-grow {
+  flex-grow: 1;
+}
+.main-container
+  .content-container
+  .content-right-container
+  .aside-album
+  .album-div
+  .fa-heart:hover {
+  color: red;
+}
+
+/*# sourceMappingURL=main.css.map */
